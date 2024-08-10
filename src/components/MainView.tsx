@@ -1,3 +1,4 @@
+"use client";
 // Layout of the componets for the context
 import React, { useState } from "react";
 import Hero from "./Hero";
