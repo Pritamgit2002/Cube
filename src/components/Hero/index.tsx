@@ -138,10 +138,10 @@ const Hero = ({ selected, functionSelection }: Props) => {
             <div className="text-center text-3xl font-semibold text-black tracking-tighter sm:tracking-tight">
               {data.find((item) => item.id === selected)?.name}'s Details Here
             </div>
-            <p className="text-sm font-medium w-3/4 sm:w-2/4 text-center leading-snug">
+            <p className="text-sm font-medium w-2/4 text-center leading-snug">
               {data.find((item) => item.id === selected)?.description}
             </p>
-            <div className="w-full grid grid-cols-3 gap-2 sm:gap-12 text-center justify-items-center ">
+            <div className=" w-max grid grid-cols-3 gap-2 sm:gap-8 text-center justify-items-center ">
               {loading
                 ? Array.from({ length: 9 }).map((_, index) => (
                     <div
