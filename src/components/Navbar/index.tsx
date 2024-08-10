@@ -18,6 +18,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { data } from "@/data/data";
+import { FaGithub, FaTwitter } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import Link from "next/link";
 
 type Props = {
   selected: number;
@@ -36,7 +39,7 @@ export const Navbar = ({ selected, functionSelection }: Props) => {
     <div className="w-full h-max border-b-2 border-slate-400 z-10 px-4 py-2 flex items-center justify-between bg-gray-800 text-neutral-50">
       <span className="text-lg font-semibold">Navbar</span>
       <div className="w-max flex gap-x-2 items-center justify-center">
-        <div className="block lg:hidden">
+        <div className="block sm:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger
               className="flex items-center justify-center"
@@ -118,13 +121,55 @@ export const Navbar = ({ selected, functionSelection }: Props) => {
         </Dialog>
 
         {/* fake Profile Image */}
-        <Image
-          src="/images/profile.jpeg"
-          alt="Logo"
-          width={1000}
-          height={1000}
-          className="w-10 h-10 rounded-full object-contain cursor-pointer"
-        />
+
+        <Dialog>
+          <DialogTrigger>
+            <Image
+              src="/images/profile.jpeg"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="w-10 h-10 rounded-full object-contain cursor-pointer"
+            />
+          </DialogTrigger>
+          <DialogContent className="flex flex-col items-center justify-center">
+            <Image
+              src="/images/profile.jpeg"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="w-16 h-16 rounded-full object-contain cursor-pointer"
+            />
+            <DialogHeader>
+              <DialogTitle className=" flex flex-col items-center justify-center ">
+                <span>Pritam Gain</span>
+                <span className="text-neutral-500 text-sm">
+                  pritamgain2002@gmail.com
+                </span>
+              </DialogTitle>
+              <DialogDescription className=" w-full flex items-center gap-x-8 px-6 pt-2 transition-all duration-200 text-3xl text-black hover:text-black/75 ">
+                <Link
+                  href="https://github.com/Pritamgit2002/Cube"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/pritam-gain-6b5b18216/"
+                  target="_blank"
+                >
+                  <IoLogoLinkedin />
+                </Link>
+                <Link
+                  href="https://github.com/phttps://x.com/PritamGain56874"
+                  target="_blank"
+                >
+                  <FaTwitter />
+                </Link>
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );

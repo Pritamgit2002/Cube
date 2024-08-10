@@ -69,7 +69,7 @@ const Hero = ({ selected, functionSelection }: Props) => {
     <div className="w-full flex items-start justify-start relative">
       {/* Sidebar for larger screens */}
       <div className="w-[450px] h-screen overflow-y-auto custom-scrollbar hidden lg:block">
-        <div className="flex flex-col">
+        <div className=" h-max flex flex-col sitems-start justify-start pb-16 ">
           {data.map((item, index) => (
             <button
               className={`border-b-2 border-gray-200 cursor-pointer px-8 py-4 flex flex-col gap-y-2 items-start justify-start text-left active:bg-gray-200/85 transition-all duration-200
