@@ -1,6 +1,7 @@
 import { ImageTypes } from "@/types/image";
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_ACCESS_KEY;
+//calling 27 image per 30 secs to reduce the network call.
 const API_URL = `https://api.unsplash.com/photos/random?count=27`;
 
 export async function fetchImages(): Promise<ImageTypes[]> {

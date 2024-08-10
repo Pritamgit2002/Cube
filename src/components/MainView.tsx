@@ -12,7 +12,7 @@ const MainView = () => {
   };
 
   return (
-    <div className="w-full h-screen text-3xl font-medium text-black flex flex-col items-start justify-start overflow-hidden  ">
+    <div className="w-full h-screen text-3xl font-medium text-black flex flex-col items-start justify-start overflow-y-auto  ">
       <Navbar selected={selected} functionSelection={functionSelection} />
       <Hero selected={selected} functionSelection={functionSelection} />
     </div>
