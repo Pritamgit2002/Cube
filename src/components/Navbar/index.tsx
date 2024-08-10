@@ -109,7 +109,7 @@ export const Navbar = ({ selected, functionSelection }: Props) => {
                   </li>
                   <li>
                     To decrease the network call, I'm calling{" "}
-                    <b>27 images at a time.</b>
+                    <b>27 images at a time after 30 Secs.</b>
                   </li>
                 </ol>
               </DialogDescription>

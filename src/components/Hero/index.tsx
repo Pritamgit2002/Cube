@@ -12,10 +12,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { GoSidebarCollapse } from "react-icons/go";
+
 type Props = {
   selected: number;
   functionSelection: (id: number) => void;
 };
+
 const Hero = ({ selected, functionSelection }: Props) => {
   const [images, setImages] = useState<ImageTypes[]>([]);
   const [displayImages, setDisplayImages] = useState<ImageTypes[]>([]);
@@ -37,11 +39,14 @@ const Hero = ({ selected, functionSelection }: Props) => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      loadImages();
+    loadImages(); // Load images initially
+
+    const interval = setInterval(() => {
+      loadImages(); // Reload images every 30 seconds
     }, 30000); // 30 seconds in milliseconds
 
-    return () => clearTimeout(timer);
+    // Cleanup function to clear the interval
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -57,7 +62,7 @@ const Hero = ({ selected, functionSelection }: Props) => {
 
   const handleClick = (id: number) => {
     functionSelection(id);
-    loadImages();
+    loadImages(); // Optionally reload images when a selection changes
   };
 
   return (
@@ -75,7 +80,6 @@ const Hero = ({ selected, functionSelection }: Props) => {
                 }
               `}
               key={index}
-              // onClick={() => functionSelection(item.id)}
               onClick={() => handleClick(item.id)}
             >
               <div className="flex flex-col gap-y-1">
