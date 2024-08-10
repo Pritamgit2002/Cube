@@ -37,7 +37,11 @@ const Hero = ({ selected, functionSelection }: Props) => {
   };
 
   useEffect(() => {
-    loadImages();
+    const timer = setTimeout(() => {
+      loadImages();
+    }, 30000); // 30 seconds in milliseconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
