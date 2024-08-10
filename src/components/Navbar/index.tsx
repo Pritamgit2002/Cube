@@ -147,24 +147,24 @@ export const Navbar = ({ selected, functionSelection }: Props) => {
                   pritamgain2002@gmail.com
                 </span>
               </DialogTitle>
-              <DialogDescription className=" w-full flex items-center gap-x-8 px-6 pt-2 transition-all duration-200 text-3xl text-black hover:text-black/75 ">
+              <DialogDescription className=" w-full flex items-center gap-x-8 px-6 pt-2 transition-all duration-200 text-3xl  ">
                 <Link
                   href="https://github.com/Pritamgit2002/Cube"
                   target="_blank"
                 >
-                  <FaGithub />
+                  <FaGithub className="text-black hover:text-black/70" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/pritam-gain-6b5b18216/"
                   target="_blank"
                 >
-                  <IoLogoLinkedin />
+                  <IoLogoLinkedin className="text-black hover:text-black/70" />
                 </Link>
                 <Link
                   href="https://github.com/phttps://x.com/PritamGain56874"
                   target="_blank"
                 >
-                  <FaTwitter />
+                  <FaTwitter className="text-black hover:text-black/70" />
                 </Link>
               </DialogDescription>
             </DialogHeader>
